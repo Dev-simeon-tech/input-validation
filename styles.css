@@ -2,16 +2,18 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
 }
 body{
     margin: 0;
     padding: 0;
     background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-    font-family: 'Poppins', sans-serif;
+    touch-action: pan-y;
 }
 #form{
     width: 400px;
-    margin: 20vh auto 0 auto;
+    margin: 10vh auto 0 auto;
     background-color: whitesmoke;
     border-radius: 8px;
     font-size: 16px;
@@ -32,19 +34,27 @@ body{
     border-radius: 6px;
     cursor: pointer;
     font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    transition: 0.3s ease;
+
+}
+#form button:is(:hover){
+    background-color: rgb(91, 103, 214);
+
 }
 .input-control{
     display: flex;
     flex-direction: column;
     margin-bottom: 7px;
     width: 100%;
+    position: relative;
 }
 .input-control input{
     border: 2px solid #f0f0f0;
     border-radius: 4px;
     width: 100%;
     padding: 10px;
-    font-size: 12px;
+    font-size: 16px;
     display: block;
 }
 .input-control input:focus{
@@ -61,6 +71,13 @@ body{
     font-size: 14px;
     height: 13px;
 }
+.eye{
+    position: absolute;
+    right: 10px;
+    bottom: 25px;
+    cursor: pointer;
+    transition: all 0.8s ease;
+}
 /* mobile view starts */
 @media(max-width:789px){
     #form{
@@ -72,6 +89,11 @@ body{
 
     #form h1{
         color:#f0f0f0 ;
+    }
+}
+@media(max-width:545px){
+    .input-control input{
+        font-size: 16px;
     }
 }
 /* mobile view ends */
