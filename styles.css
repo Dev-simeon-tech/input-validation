@@ -77,6 +77,11 @@ body{
     bottom: 25px;
     cursor: pointer;
     transition: all 0.8s ease;
+    color: #333;
+    /* border: 2px solid red; */
+    font-size: 20px;
+    /* padding: 20px; */
+    /* height: 30%; */
 }
 /* mobile view starts */
 @media(max-width:789px){
@@ -94,6 +99,7 @@ body{
 @media(max-width:545px){
     .input-control input{
         font-size: 16px;
+        height: 40px;
     }
 }
 /* mobile view ends */
