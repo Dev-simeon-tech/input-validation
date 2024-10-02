@@ -1,6 +1,5 @@
 const  {MongoClient} = require('mongodb')
 
-
 const client = new MongoClient('mongodb://localhost:27017')
 const  dbName = 'usersdb';
 
@@ -12,8 +11,6 @@ module.exports  = {
             console.log('Connected to MongoDB');
             
             db = client.db(dbName);
-            // const booksCollection = db.collection('books');
-            // const booksData = await booksCollection.find().sort({title: 1}).toArray(); 
             
             return func();
         } catch (err) {
@@ -23,7 +20,6 @@ module.exports  = {
         }
     },
     getDb: ()=>{
-        // console.log(db)
         return db;
     }
 }
